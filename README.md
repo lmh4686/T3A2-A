@@ -22,9 +22,9 @@ Potential restaurant's customers.
 
 ### Tech Stack
 
-MERN stack will be used for the development.  
+MERN stack will be used for the development.
 
-Frontend:  
+Frontend:
 
 - React
 - Other Dependencies:

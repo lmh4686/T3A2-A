@@ -42,12 +42,21 @@ Backend:
 
 ## User Story
 
-### As a Potential Customer
+### As a **Visitor**
   
-| action | reason |  
+| Action | Reason |  
 | ------ | ------ |
-| view menu with photos | better understanding of food |
-| view menu with price | estimate budget |
-| view menu with a short description | better understanding of food |
+| View menu with photos | Better understanding of food |
+| View menu with price | Estimate budget |
+| View menu with a short description | Better understanding of food |
+| View the restaurant's location | Know location of the restaurant |
+| View the restaurant's contact | Know contact of the restaurant |
+| View the restaurant's business hour | Know the restaurant's business hour |
+| Book tables | Easier to book tables |
+| Receives booking confirmation after booking | Customer knows that booking has been made successfully |
 
-# This is created from 'Lee' branch
+### As an **Admin**
+
+| Action | Reason |  
+| ------ | ------ |
+| View reservation list by date with customers information |  |

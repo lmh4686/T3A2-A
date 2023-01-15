@@ -42,10 +42,12 @@ Backend:
 
 ## User Story
 
-### As a Potential Customer:
+### As a Potential Customer
   
 | action | reason |  
 | ------ | ------ |
 | view menu with photos | better understanding of food |
 | view menu with price | estimate budget |
 | view menu with a short description | better understanding of food |
+
+# This is created from 'Lee' branch

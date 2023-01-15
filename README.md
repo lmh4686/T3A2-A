@@ -28,7 +28,7 @@ Frontend:
 
 - React
 - Other Dependencies:
-  - react-router-dom, dotenv.
+  - react-router-dom, axios, dotenv.
 
 Backend:
 
@@ -44,7 +44,7 @@ Backend:
 
 ### As a **Visitor**
   
-| Action | Reason |  
+| Action | Outcome |  
 | ------ | ------ |
 | View menu with photos | Better understanding of food |
 | View menu with price | Estimate budget |
@@ -53,11 +53,17 @@ Backend:
 | View the restaurant's contact | Know contact of the restaurant |
 | View the restaurant's business hour | Know the restaurant's business hour |
 | Book tables | Easier to book tables |
-| Receives booking confirmation after booking | Customer knows that booking has been made successfully |
+| Receives booking confirmation after booking | Know that booking has been made successfully |
 
 ### As an **Admin**
 
-| Action | Reason |  
+| Action | Outcome |  
 | ------ | ------ |
-| View reservation list by date with customers information |  |
-
+| Admin login | Only admin is accessible to reservation list |
+| Receives information of customer's first name, last name, number of visitors, mobile number, date and time for visit on booking | Prepare table accordingly, Call to customer, Guide customers to their seats on arrival |
+| Confirm a new reservation by clicking a 'Confirm' button | Identify incoming reservation  |
+| View reservation list in two groups: unconfirmed and confirmed | Identify unconfirmed reservation so the table can be prepared for unconfirmed reservations |
+| View reservation lists in time sequence (top: earliest entry time, bottom: latest entry time) | Easier to read |
+| Search a reservation by customer's name and phone number | Easy to find a reservation |
+| Update reservation details | Accept customers' plan change |
+| Cancel (delete) a reservation | Table can be available for others |

@@ -1,4 +1,6 @@
-## Project Introduction  
+# Restaurant Web Application Project
+
+## Project Introduction
 
 ### Purpose
 
@@ -16,7 +18,7 @@ Only employees will be able to update, cancel, read bookings.
 
 ### Target Audience
 
-Both restaurant customers and restaurant workers.
+Potential restaurant's customers.
 
 ### Tech Stack
 
@@ -40,8 +42,10 @@ Backend:
 
 ## User Story
 
-### As a potential customer,
+### As a Potential Customer:
   
 | action | reason |  
 | ------ | ------ |
-| view menu | sgdhsd |
+| view menu with photos | better understanding of food |
+| view menu with price | estimate budget |
+| view menu with a short description | better understanding of food |

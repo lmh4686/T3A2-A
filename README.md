@@ -1,6 +1,6 @@
 # Restaurant Web Application Project
 
-## Project Introduction
+## Project Introduction <요기 수정하고 있음!!!!>
 
 ### Purpose
 
@@ -22,9 +22,9 @@ Potential restaurant's customers.
 
 ### Tech Stack
 
-MERN stack will be used for the development.  
+MERN stack will be used for the development.
 
-Frontend:  
+Frontend:
 
 - React
 - Other Dependencies:
@@ -43,11 +43,11 @@ Backend:
 ## User Story
 
 ### As a Potential Customer
-  
-| action | reason |  
-| ------ | ------ |
-| view menu with photos | better understanding of food |
-| view menu with price | estimate budget |
+
+| action                             | reason                       |
+| ---------------------------------- | ---------------------------- |
+| view menu with photos              | better understanding of food |
+| view menu with price               | estimate budget              |
 | view menu with a short description | better understanding of food |
 
 # This is created from 'Lee' branch

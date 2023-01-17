@@ -22,9 +22,9 @@ Potential restaurant's customers.
 
 ### Tech Stack
 
-MERN stack will be used for the development.
+MERN stack will be used for the development.  
 
-Frontend:
+Frontend:  
 
 - React
 - Other Dependencies:
@@ -52,14 +52,15 @@ Backend:
 | View the restaurant's location | Know location of the restaurant |
 | View the restaurant's contact | Know contact of the restaurant |
 | View the restaurant's business hour | Know the restaurant's business hour |
-| Book tables | Easier to book tables |
-| Receives booking confirmation after booking | Know that booking has been made successfully |
+| Book tables | No need to call restaurant. |
+| Receive booking confirmation after booking | Know that booking has been made successfully |
+| Receive booking fail message when there's no available table | Know that booking has been failed |
 
 ### As an **Admin**
 
 | Action | Outcome |  
 | ------ | ------ |
-| Admin login | Only admin is accessible to reservation list |
+| Log into admin account | Only admin is accessible to reservation list |
 | Receives information of customer's first name, last name, number of visitors, mobile number, date and time for visit on booking | Prepare table accordingly, Call to customer, Guide customers to their seats on arrival |
 | Confirm a new reservation by clicking a 'Confirm' button | Identify incoming reservation  |
 | View reservation list in two groups: unconfirmed and confirmed | Identify unconfirmed reservation so the table can be prepared for unconfirmed reservations |

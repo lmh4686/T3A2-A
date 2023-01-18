@@ -69,3 +69,27 @@ Backend:
 | Search a reservation by customer's name and phone number | Easy to find a reservation |
 | Update reservation details | Accept customers' plan changes |
 | Cancel (delete) a reservation | Table can be available for others |
+
+---
+
+## DFD
+
+### Customer booking a table
+
+![customer booking](docs/booking.png)
+
+### Admin login
+
+![admin login](docs/login.png)
+
+### Admin view reservation list
+
+![admin view reservation list](docs/view.png)
+
+### Admin update a reservation
+
+![admin update reservation](docs/update.png)
+
+### Admin delete a reservation
+
+![admin delete reservation](docs/delete.png)

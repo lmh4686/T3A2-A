@@ -14,11 +14,11 @@ Customers and employees will be able to:
 2. Browse menu & price.
 3. Browse the restaurant's location and contact details.
 
-Only employees will be able to update, cancel, read bookings.
+**Only employees will be able to update, cancel, read bookings.**
 
 ### Target Audience
 
-Potential restaurant's customers.
+Potential restaurant's customers and restaurant workers.
 
 ### Tech Stack
 
@@ -62,9 +62,34 @@ Backend:
 | ------ | ------ |
 | Log into admin account | Only admin is accessible to reservation list |
 | Receives information of customer's first name, last name, number of visitors, mobile number, date and time for visit on booking | Prepare table accordingly, Call to customer, Guide customers to their seats on arrival |
-| Confirm a new reservation by clicking a 'Confirm' button | Identify incoming reservation  |
+| Confirm a new reservation by clicking a 'Confirm' button | Identify incoming reservation |
+| View reservation list group by date by selecting a date | Easier to identify bookings by date |
 | View reservation list in two groups: unconfirmed and confirmed | Identify unconfirmed reservation so the table can be prepared for unconfirmed reservations |
-| View reservation lists in time sequence (top: earliest entry time, bottom: latest entry time) | Easier to read |
+| View reservation lists in time sequence (top: earliest entry time, bottom: latest entry time) | Easier to identify guests coming soon |
 | Search a reservation by customer's name and phone number | Easy to find a reservation |
-| Update reservation details | Accept customers' plan change |
+| Update reservation details | Accept customers' plan changes |
 | Cancel (delete) a reservation | Table can be available for others |
+
+---
+
+## DFD
+
+### Customer booking a table
+
+![customer booking](docs/booking.png)
+
+### Admin login
+
+![admin login](docs/login.png)
+
+### Admin view reservation list
+
+![admin view reservation list](docs/view.png)
+
+### Admin update a reservation
+
+![admin update reservation](docs/update.png)
+
+### Admin delete a reservation
+
+![admin delete reservation](docs/delete.png)

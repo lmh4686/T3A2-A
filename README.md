@@ -10,11 +10,26 @@ This project is aimed at developing a restaurant web application that can be ben
 
 Customers and employees will be able to:
 
-1. Book tables.
-2. Browse menu & price.
-3. Browse the restaurant's location and contact details.
+- Book tables.
+- Browse menu & price.
+- Browse the restaurant's location and contact details.
 
-**Only employees will be able to update, cancel, read bookings.**
+**Only employees will be able to update, delete and read bookings.**
+
+Employees can :
+
+- Login / Logout admin account.
+- View a list of reservations group by selected date in time sequence.
+- Identify new booking.
+- Search a reservation by the customer's mobile number.
+- Update reservations details.
+- Delete reservations.
+
+When a booking is requested :
+
+- Automatically calculate the availability based on the provided visiting date, time and number of guests and return corresponding message to the client immediately.
+- If there's available table, automatically assign a table that can accommodate the number of guests on the given date and time.
+- Alert to the admin user when there's a new booking.
 
 ### Target Audience
 
@@ -61,13 +76,16 @@ Backend:
 | Action | Outcome |  
 | ------ | ------ |
 | Log into admin account | Only admin is accessible to reservation list |
-| Receives information of customer's first name, last name, number of visitors, mobile number, date and time for visit on booking | Prepare table accordingly, Call to customer, Guide customers to their seats on arrival |
+| Don't want to login frequently | It's more convenient |
+| Receives information of customer's first name, last name, number of visitors, mobile number, date and time for visit on booking | Prepare table accordingly, Guide customers to their seats on arrival Call to customer when necessary |
+| Assign an available table automatically when a booking is made | Employee can read the assigned table information with the customer's information and guide them to their reserved table when they arrive to the restaurant |
+| Only receives online booking when the number of guest is not bigger than 6 | Minimize risk of no-show, Table can be arranged accordingly by human for a large number of guests |
 | Confirm a new reservation by clicking a 'Confirm' button | Identify incoming reservation |
-| View reservation list group by date by selecting a date | Easier to identify bookings by date |
+| View reservation list group by date by selected date | Easier to identify bookings by date |
 | View reservation list in two groups: unconfirmed and confirmed | Identify unconfirmed reservation so the table can be prepared for unconfirmed reservations |
 | View reservation lists in time sequence (top: earliest entry time, bottom: latest entry time) | Easier to identify guests coming soon |
-| Search a reservation by customer's name and phone number | Easy to find a reservation |
-| Update reservation details | Accept customers' plan changes |
+| Search a reservation by customer's mobile number | Easy to find a target reservation |
+| Update all details of the reservations | Accept customers' plan changes |
 | Cancel (delete) a reservation | Table can be available for others |
 
 ---
@@ -102,6 +120,7 @@ In this project, we will seed the tables with 2 seats, 4 seats and 6 seats.
 ```
 
 The reservation collection represents all successfully made reservations.  
+'isConfirmed' field is necessary to identify reservations that have not been checked or prepared by the restaurant workers.
 The 'guest' field will exist as a sub document form and will have the following schema:
 
 ```js

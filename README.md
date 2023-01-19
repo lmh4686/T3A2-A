@@ -1,6 +1,6 @@
 # Restaurant Web Application Project
 
-## Project Introduction <요기 수정하고 있음!!!!>
+## Project Introduction <요기 수정하고 있음!>
 
 ### Purpose
 

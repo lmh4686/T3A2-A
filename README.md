@@ -1,6 +1,6 @@
 # Restaurant Web Application Project
 
-## Project Introduction
+## Project Introduction <-----Yogida 11>
 
 ### Purpose
 
@@ -133,8 +133,7 @@ The 'guest' field will exist as a sub document form and will have the following 
 }
 ```
 
-The above schema is the information that potential customers are required to provide on reservation request as well.  
-
+The above schema is the information that potential customers are required to provide on reservation request as well.
 
 ### Admin
 

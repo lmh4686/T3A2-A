@@ -37,9 +37,9 @@ Potential restaurant's customers and restaurant workers.
 
 ### Tech Stack
 
-MERN stack will be used for the development.  
+MERN stack will be used for the development.
 
-Frontend:  
+Frontend:
 
 - React
 - Other Dependencies:
@@ -58,35 +58,35 @@ Backend:
 ## User Story
 
 ### As a **Visitor**
-  
-| Action | Outcome |  
-| ------ | ------ |
-| View menu with photos | Better understanding of food |
-| View menu with price | Estimate budget |
-| View menu with a short description | Better understanding of food |
-| View the restaurant's location | Know location of the restaurant |
-| View the restaurant's contact | Know contact of the restaurant |
-| View the restaurant's business hour | Know the restaurant's business hour |
-| Book tables | No need to call restaurant. |
-| Receive booking confirmation after booking | Know that booking has been made successfully |
-| Receive booking fail message when there's no available table | Know that booking has been failed |
+
+| Action                                                       | Outcome                                      |
+| ------------------------------------------------------------ | -------------------------------------------- |
+| View menu with photos                                        | Better understanding of food                 |
+| View menu with price                                         | Estimate budget                              |
+| View menu with a short description                           | Better understanding of food                 |
+| View the restaurant's location                               | Know location of the restaurant              |
+| View the restaurant's contact                                | Know contact of the restaurant               |
+| View the restaurant's business hour                          | Know the restaurant's business hour          |
+| Book tables                                                  | No need to call restaurant.                  |
+| Receive booking confirmation after booking                   | Know that booking has been made successfully |
+| Receive booking fail message when there's no available table | Know that booking has been failed            |
 
 ### As an **Admin**
 
-| Action | Outcome |  
-| ------ | ------ |
-| Log into admin account | Only admin is accessible to reservation list |
-| Don't want to login frequently | It's more convenient |
-| Receives information of customer's first name, last name, number of visitors, mobile number, date and time for visit on booking | Prepare table accordingly, Guide customers to their seats on arrival Call to customer when necessary |
-| Assign an available table automatically when a booking is made | Employee can read the assigned table information with the customer's information and guide them to their reserved table when they arrive to the restaurant |
-| Only receives online booking when the number of guest is not bigger than 6 | Minimize risk of no-show, Table can be arranged accordingly by human for a large number of guests |
-| Confirm a new reservation by clicking a 'Confirm' button | Identify incoming reservation |
-| View reservation list group by date by selected date | Easier to identify bookings by date |
-| View reservation list in two groups: unconfirmed and confirmed | Identify unconfirmed reservation so the table can be prepared for unconfirmed reservations |
-| View reservation lists in time sequence (top: earliest entry time, bottom: latest entry time) | Easier to identify guests coming soon |
-| Search a reservation by customer's mobile number | Easy to find a target reservation |
-| Update all details of the reservations | Accept customers' plan changes |
-| Cancel (delete) a reservation | Table can be available for others |
+| Action                                                                                                                          | Outcome                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Log into admin account                                                                                                          | Only admin is accessible to reservation list                                                                                                               |
+| Don't want to login frequently                                                                                                  | It's more convenient                                                                                                                                       |
+| Receives information of customer's first name, last name, number of visitors, mobile number, date and time for visit on booking | Prepare table accordingly, Guide customers to their seats on arrival Call to customer when necessary                                                       |
+| Assign an available table automatically when a booking is made                                                                  | Employee can read the assigned table information with the customer's information and guide them to their reserved table when they arrive to the restaurant |
+| Only receives online booking when the number of guest is not bigger than 6                                                      | Minimize risk of no-show, Table can be arranged accordingly by human for a large number of guests                                                          |
+| Confirm a new reservation by clicking a 'Confirm' button                                                                        | Identify incoming reservation                                                                                                                              |
+| View reservation list group by date by selected date                                                                            | Easier to identify bookings by date                                                                                                                        |
+| View reservation list in two groups: unconfirmed and confirmed                                                                  | Identify unconfirmed reservation so the table can be prepared for unconfirmed reservations                                                                 |
+| View reservation lists in time sequence (top: earliest entry time, bottom: latest entry time)                                   | Easier to identify guests coming soon                                                                                                                      |
+| Search a reservation by customer's mobile number                                                                                | Easy to find a target reservation                                                                                                                          |
+| Update all details of the reservations                                                                                          | Accept customers' plan changes                                                                                                                             |
+| Cancel (delete) a reservation                                                                                                   | Table can be available for others                                                                                                                          |
 
 ---
 
@@ -156,11 +156,11 @@ It will have only one pre-seeded document because having multiple admin accounts
 
 When a customer request a reservation, we will receive these information filled by the customer:
 
- 1. First name
- 2. Last name
- 3. Mobile number
- 4. Date (Inc time)
- 5. Number of guest
+1.  First name
+2.  Last name
+3.  Mobile number
+4.  Date (Inc time)
+5.  Number of guest
 
 This information is represented as **'Booking Info'** in this DFD.
 
@@ -258,4 +258,3 @@ The Back-end server communicates with the database depending on the request and 
 ### **Database layer**
 
 Data is kept in DB so that uses can retrieve the data they want or update and delete the data.
-

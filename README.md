@@ -293,7 +293,7 @@ The final of its project design phase is as follows.
 
 ![changed first draft](docs/WF-fin-dt-01.png)
 
-This is the screen when you first access this application.
+This is the page when you first access this application.
 
 1. **Menu** <br>
    User can go to a page where shows the menu served in the restaurant when click the button. <br>
@@ -306,7 +306,7 @@ This is the screen when you first access this application.
 5. **Logo** (http://localhost:3000) <br>
    A button to go to the home page <br>
 
-![changed first draft](docs/WF-fin-dt-02.png)
+![client booking](docs/WF-fin-dt-02.png)
 
 It is a page where existing and new customers can make reservations
 
@@ -316,3 +316,24 @@ It is a page where existing and new customers can make reservations
    Customer can enter the desired date, time, and number of guests for reservation. You can enter up to 6 people for the number of people.
 3. **Button** <br>
    `Booking button` is user can make a reservation after entering the information. `Update button` is user can fix the reservation information. `Delete button` is user can cancel the reservation.
+
+![aboutus](docs/WF-fin-dt-03.png) <br>
+This AboutUs page shows about the location of the restaurant and its details. <br>
+
+![admin login](docs/WF-fin-dt-04.png) <br>
+
+After project meeting, this page is the new function and screen we got. The purpose of this page is to prevent anyone from accessing the admin page.
+
+![admin page](docs/WF-fin-dt-05.png) <br>
+The admin can use this page to manage the bookings.
+
+1. **Check Box** <br>
+   If admin click the checkbox the booking turns to completion status. So the admin can see this booking in completed part (the part said number 3 in the picture). <br>
+2. **A table needs to conform** <br>
+   This is a table showing the reservations made by the customer for the admin to check the customer's registered reservation.
+3. **A table shows booking completed** <br>
+   This is a table showing the reservations confirmed by the admin.
+4. **Update and Delete Button** <br>
+   This is a button for the admin to update or delete the information of the booking that has been confirmed.
+5. **Logout Button** <br>
+   For the safety reasons, this button is designed to log out if admin is away for a long time.

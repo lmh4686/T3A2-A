@@ -257,3 +257,101 @@ The Back-end server communicates with the database depending on the request and 
 ### **Database layer**
 
 Data is kept in DB so that uses can retrieve the data they want or update and delete the data.
+
+---
+
+## WireFrame
+
+<br>
+
+`Wireframe` is simplified, low-fidelity representations of a user interface that are used to demonstrate the structure and layout of a website or application. A rough sketch of the designer's idea of the application is used to share his/her thoughts with the relevant stakeholder and developers. We use the `Agile methodology` to efficiently complete this wireframe, allowing for immediate reflection of user requirements changes and better ideas. When a new idea came up, we discussed the pros and cons of it and problems when implementing it, applied it to the draft wireframe, and repeated this process until it was completed. In order to explain the `Agile methodology` of consultation, modification, and reflection, the changed history part is described as follows. Our project team use `Figma` to get wireframes
+
+### **The first draft**
+
+![first draft](docs/WF-firstDraft.png)
+
+After the first meeting of our project team, we drafted the wireframe as above. It consists of a `home page` that can be viewed when a user accesses this application, a `reservation page` that can make a reservation, and an `about us page` that indicates the location and business hours of a restaurant.
+
+#### **Set items in Navbar**
+
+The Navbar has `Menu`, `Reservation`, and `AboutUs` items. It can be moved to corresponding page when clicking on. On the left side of Navbar, a `restaurant logo` is placed so that when clicked, we can move to Home page.
+
+#### **Who handles the application?**
+
+The issue that arose during the first meeting was who would handle this application. I said that the restaurant owner, not the customer, is for reservation management, and Jihyuk, a team member, suggested that the customer make reservations himself and the restaurant owner should manage it. The latter seemed more realistic, so we decided to implement this way.
+
+#### **Implementing changes**
+
+An `Admin` item was added to navbar. The `booking list` on the reservation page of the draft was moved to the `Admin page` to confirm the reservation by the admin. On the reservation page, in order for customers to conveniently register when making a reservation, they searched their mobile number and if it is already registered, the existing their information is displayed. In the case of a new customer, they would register their reservation information. The contents of this change are as follows.
+
+![changed first draft](docs/WF-2nddraft.png)
+
+The yellow part is the newly added part, and the sky blue part is the changed part.
+
+Through the consultation process as above, the `Admin login` screen and the function of modifying and deleting reservations were added, and the screen was implemented so that admins could also modify and delete reservations.
+The final of its project design phase is as follows.
+
+#### **Desktop Diagrams**
+
+![changed first draft](docs/WF-fin-dt-01.png)
+
+This is the page when you first access this application.
+
+1. **Menu** <br>
+   User can go to a page where shows the menu served in the restaurant when click the button. <br>
+2. **Reservations** (http://localhost:3000/reservation/booking) <br>
+   User can go to the above URL where you can make a reservation.
+3. **AboutUs** (http://localhost:3000/aboutUs) <br>
+   A button to go to the page that shows restaurant's location and detail information. <br>
+4. **Admin** (http://localhost:3000/admin) <br>
+   A button that can be moved to a page where admin can log in <br>
+5. **Logo** (http://localhost:3000) <br>
+   A button to go to the home page <br>
+
+![client booking](docs/WF-fin-dt-02.png)
+
+It is a page where existing and new customers can make reservations
+
+1. **Customer search** <br>
+   When existing customers enter their mobile number, their information is displayed in number 2 area on the right, and they can enter the desired date and time for reservation. New customers can enter their reservation information.
+2. **Input area** <br>
+   Customer can enter the desired date, time, and number of guests for reservation. You can enter up to 6 people for the number of people.
+3. **Button** <br>
+   `Booking button` is user can make a reservation after entering the information. `Update button` is user can fix the reservation information. `Delete button` is user can cancel the reservation.
+
+![aboutus](docs/WF-fin-dt-03.png) <br>
+This AboutUs page shows about the location of the restaurant and its details. <br>
+
+![admin login](docs/WF-fin-dt-04.png) <br>
+
+After project meeting, this page is the new function and screen we got. The purpose of this page is to prevent anyone from accessing the admin page.
+
+![admin page](docs/WF-fin-dt-05.png) <br>
+The admin can use this page to manage the bookings.
+
+1. **Check Box** <br>
+   If admin click the checkbox the booking turns to completion status. So the admin can see this booking in completed part (the part said number 3 in the picture). <br>
+2. **A table needs to conform** <br>
+   This is a table showing the reservations made by the customer for the admin to check the customer's registered reservation.
+3. **A table shows booking completed** <br>
+   This is a table showing the reservations confirmed by the admin.
+4. **Update and Delete Button** <br>
+   This is a button for the admin to update or delete the information of the booking that has been confirmed.
+5. **Logout Button** <br>
+   For the safety reasons, this button is designed to log out if admin is away for a long time.
+
+#### **Tablet Diagrams**
+
+Contents shown in AAD for desktop should be displayed vertically on tablet(824X1194) so that they do not cross the window. The function description of each content is the same as that of the desktop.
+
+![tablet 01](docs/WF-fin-tb-01.png) <br>
+
+![tablet 02](docs/WF-fin-tb-02.png) <br>
+
+#### **Mobile Diagrams**
+
+All content should be adjusted to fit the mobile size.
+
+![tablet 02](docs/WF-fin-mb-01.png) <br>
+
+Our team completed our wireframes via `Facetime` and `chat`. When new features and restrictions came up, we tried to derive good results through an `iterative process of consultation, implementation, and testing`.

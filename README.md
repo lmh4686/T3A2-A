@@ -264,7 +264,7 @@ Data is kept in DB so that uses can retrieve the data they want or update and de
 
 <br>
 
-`Wireframe` is simplified, low-fidelity representations of a user interface that are used to demonstrate the structure and layout of a website or application. A rough sketch of the designer's idea of the application is used to share his/her thoughts with the relevant stakeholder and developers. We use the `Agile methodology` to efficiently complete this wireframe, allowing for immediate reflection of user requirements changes and better ideas. When a new idea came up, we discussed the pros and cons of it and problems when implementing it, applied it to the draft wireframe, and repeated this process until it was completed. In order to explain the `Agile methodology` of consultation, modification, and reflection, the changed history part is described as follows.
+`Wireframe` is simplified, low-fidelity representations of a user interface that are used to demonstrate the structure and layout of a website or application. A rough sketch of the designer's idea of the application is used to share his/her thoughts with the relevant stakeholder and developers. We use the `Agile methodology` to efficiently complete this wireframe, allowing for immediate reflection of user requirements changes and better ideas. When a new idea came up, we discussed the pros and cons of it and problems when implementing it, applied it to the draft wireframe, and repeated this process until it was completed. In order to explain the `Agile methodology` of consultation, modification, and reflection, the changed history part is described as follows. Our project team use `Figma` to get wireframes
 
 ### **The first draft**
 
@@ -290,6 +290,8 @@ The yellow part is the newly added part, and the sky blue part is the changed pa
 
 Through the consultation process as above, the `Admin login` screen and the function of modifying and deleting reservations were added, and the screen was implemented so that admins could also modify and delete reservations.
 The final of its project design phase is as follows.
+
+#### **Desktop Diagrams**
 
 ![changed first draft](docs/WF-fin-dt-01.png)
 
@@ -337,3 +339,19 @@ The admin can use this page to manage the bookings.
    This is a button for the admin to update or delete the information of the booking that has been confirmed.
 5. **Logout Button** <br>
    For the safety reasons, this button is designed to log out if admin is away for a long time.
+
+#### **Tablet Diagrams**
+
+Contents shown in AAD for desktop should be displayed vertically on tablet(824X1194) so that they do not cross the window. The function description of each content is the same as that of the desktop.
+
+![tablet 01](docs/WF-fin-tb-01.png) <br>
+
+![tablet 02](docs/WF-fin-tb-02.png) <br>
+
+#### **Mobile Diagrams**
+
+All content should be adjusted to fit the mobile size.
+
+![tablet 02](docs/WF-fin-mb-01.png) <br>
+
+Our team completed our wireframes via `Facetime` and `chat`. When new features and restrictions came up, we tried to derive good results through an `iterative process of consultation, implementation, and testing`.

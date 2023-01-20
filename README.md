@@ -114,13 +114,13 @@ In this project, we will seed the tables with 2 seats, 4 seats and 6 seats.
 {
   _id: String,
   tableId: ObjectId, // From Table document, Populate
-  guest: guestSchema // Sub document
+  guest: guestSchema, // Sub document
   isConfirmed: Boolean // To identify unconfirmed reservation and confirmed reservation
 }
 ```
 
 The reservation collection represents all successfully made reservations.  
-'isConfirmed' field is necessary to identify reservations that have not been checked or prepared by the restaurant workers.
+'isConfirmed' field is necessary to identify reservations that have not been checked or prepared by the restaurant workers.  
 The 'guest' field will exist as a sub document form and will have the following schema:
 
 ```js
@@ -133,13 +133,15 @@ The 'guest' field will exist as a sub document form and will have the following 
 }
 ```
 
-The above schema is the information that potential customers are required to provide on reservation request.
+The above schema is the information that potential customers are required to provide on reservation request as well.  
+
 
 ### Admin
 
 ```js
 {
-  id: String //hashed, encrypted
+  _id: String,
+  id: String, //hashed, encrypted
   password: String //hashed, encrypted
 }
 ```
@@ -167,8 +169,8 @@ And the API will process the data as follows:
 1. Get an array of reservations from the Reservation collection that have the same date value with the date provided in the Booking Info (Except the time at this stage for simplicity)
 2. Filter the reservation array to get another array of reservations that have similar time from (Booking Info's time - 1h 30min) to (Booking Info's time + 1h 30min) and similar number of seats (same number of table seats with the Booking Info's number of guests or one more number of table seats than the Booking Info's number of guests). This will eventually return an array of unavailable tables that is matched with the provided conditions from the Booking Info.
 3. Check if there's any reservation reserved by the same mobile number. This will prevent customers book again accidentally. The reason why we implement this after the process of the number 2 is to allow customers to book again on the different dates or time (lunch/dinner).
-4. If the reservation found that has been made by the same customer, return error. Otherwise, get all tables from the 'Table' collections and filter to get a table that is not in the unavailable tables. This will return an available table that satisfies the condition provided from the 'Booking Info'.
-5. Insert booking info and tableId into the 'Reservation' collection.
+4. If the reservation found that has been made by the same customer, return error. Otherwise, get all tables from the 'Table' collections and find a table that is not in the unavailable tables. This will return an available table that satisfies the condition provided from the 'Booking Info'. If there's no available table, return error.
+5. If an available table is found, insert the provided booking info with the found available tableId into the 'Reservation' collection.
 6. Return the newly created document in the 'Reservation' collection.
 
 ### Admin login
@@ -216,3 +218,44 @@ Because when they want to update, delete or read a specific reservation, the tar
 To prepare for such cases, we have decided to make the restaurant workers to be able to search a reservation or reservations (booked by the same person for multiple times) by the customer's mobile number because the mobile number is unique.  
 Therefore, if the mobile number is not found from the 'Reservation' collection, it will return an error.  
 If it's found, it will return an array of reservation that have the same mobile number.
+
+---
+
+## Application Architecture Diagram
+
+<br>
+
+![AAD](docs/T3A2-A.AAD.drawio.png)
+
+This application consists of three different layers such as the Front-end layer, the Back-end layer, and database layer.
+
+### **Front-end layer**
+
+The `front-end server` can communicate with the `backend server` via `HTTP Request`. The application can be operated through a browser, and the data changed and generated through the event of the application is stored in the database through the backend.
+The frontend of this application consists of four main components and components of Header and Footer.
+
+#### **MenuList**
+
+This component represents the menu list that the restaurant has. It include meals that the shop provides and each price of the meal.
+
+#### **Booking**
+
+This component determines whether the customer is already registered and shows its information if registered.
+In case of a new customer, the customer can register his/her details and make a reservation at the date and time he/she want. The component can also change the reservation date and time and the number of people. It can also cancel the reservation if he/she don't want to.
+
+#### **AboutUs**
+
+This component has information of the restaurant such as the location, opening hours, and its address.
+
+#### **Admin**
+
+This component is logged in by the Admin to confirm and approve the reservation. And if there is a request for modification or deletion from a customer, reservation modification and deletion can be made.
+
+### **Back-end layer**
+
+The Back-end server communicates with the database depending on the request and retrieves the corresponding data to fulfill the request. This front-end request queries the Mongoose to manipulate the desired data. Once receives data from MongoDB, backend will send API response back to the frontend. The backend server manipulates data into mongoDB through APIs for inserting, updating, and deleting data.
+
+### **Database layer**
+
+Data is kept in DB so that uses can retrieve the data they want or update and delete the data.
+

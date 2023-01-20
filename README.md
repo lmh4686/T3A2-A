@@ -114,13 +114,13 @@ In this project, we will seed the tables with 2 seats, 4 seats and 6 seats.
 {
   _id: String,
   tableId: ObjectId, // From Table document, Populate
-  guest: guestSchema // Sub document
+  guest: guestSchema, // Sub document
   isConfirmed: Boolean // To identify unconfirmed reservation and confirmed reservation
 }
 ```
 
 The reservation collection represents all successfully made reservations.  
-'isConfirmed' field is necessary to identify reservations that have not been checked or prepared by the restaurant workers.
+'isConfirmed' field is necessary to identify reservations that have not been checked or prepared by the restaurant workers.  
 The 'guest' field will exist as a sub document form and will have the following schema:
 
 ```js
@@ -133,14 +133,16 @@ The 'guest' field will exist as a sub document form and will have the following 
 }
 ```
 
-The above schema is the information that potential customers are required to provide on reservation request.
+The above schema is the information that potential customers are required to provide on reservation request as well.  
+
 
 ### Admin
 
 ```js
 {
-  id: String; //hashed, encrypted
-  password: String; //hashed, encrypted
+  _id: String,
+  id: String, //hashed, encrypted
+  password: String //hashed, encrypted
 }
 ```
 
@@ -167,8 +169,8 @@ And the API will process the data as follows:
 1. Get an array of reservations from the Reservation collection that have the same date value with the date provided in the Booking Info (Except the time at this stage for simplicity)
 2. Filter the reservation array to get another array of reservations that have similar time from (Booking Info's time - 1h 30min) to (Booking Info's time + 1h 30min) and similar number of seats (same number of table seats with the Booking Info's number of guests or one more number of table seats than the Booking Info's number of guests). This will eventually return an array of unavailable tables that is matched with the provided conditions from the Booking Info.
 3. Check if there's any reservation reserved by the same mobile number. This will prevent customers book again accidentally. The reason why we implement this after the process of the number 2 is to allow customers to book again on the different dates or time (lunch/dinner).
-4. If the reservation found that has been made by the same customer, return error. Otherwise, get all tables from the 'Table' collections and filter to get a table that is not in the unavailable tables. This will return an available table that satisfies the condition provided from the 'Booking Info'.
-5. Insert booking info and tableId into the 'Reservation' collection.
+4. If the reservation found that has been made by the same customer, return error. Otherwise, get all tables from the 'Table' collections and find a table that is not in the unavailable tables. This will return an available table that satisfies the condition provided from the 'Booking Info'. If there's no available table, return error.
+5. If an available table is found, insert the provided booking info with the found available tableId into the 'Reservation' collection.
 6. Return the newly created document in the 'Reservation' collection.
 
 ### Admin login

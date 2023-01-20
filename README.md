@@ -257,3 +257,33 @@ The Back-end server communicates with the database depending on the request and 
 ### **Database layer**
 
 Data is kept in DB so that uses can retrieve the data they want or update and delete the data.
+
+---
+
+## WireFrame
+
+<br>
+
+`Wireframe` is simplified, low-fidelity representations of a user interface that are used to demonstrate the structure and layout of a website or application. A rough sketch of the designer's idea of the application is used to share his/her thoughts with the relevant stackholder and developers. We use the `agile methodology` to efficiently complete this wireframe, allowing for immediate reflection of user requirements changes and better ideas.
+
+### **The first draft**
+
+![first draft](docs/WF-firstDraft.png)
+
+After the first meeting of our project team, we drafted the wireframe as above. It consists of a `home page` that can be viewed when a user accesses this application, a `reservation page` that can make a reservation, and an `about us page` that indicates the location and business hours of a restaurant.
+
+#### **Set items in Navbar**
+
+The Navbar has `Menu`, `Reservation`, and `AboutUs` items. It can be moved to corresponding page when clicking on. On the left side of Navbar, a `restaurant logo` is placed so that when clicked, we can move to Home page.
+
+#### **Who handles the application?**
+
+The issue that arose during the first meeting was who would handle this application. I said that the restaurant owner, not the customer, is for reservation management, and Jihyuk, a team member, suggested that the customer make reservations himself and the restaurant owner should manage it. The latter seemed more realistic, so we decided to implement this way.
+
+#### **Implementing changes**
+
+An `Admin` item was added to navbar. The `booking list` on the reservation page of the draft was moved to the `Admin page` to confirm the reservation by the admin. On the reservation page, in order for customers to conveniently register when making a reservation, they searched their mobile number and if it is already registered, the existing their information is displayed. In the case of a new customer, they would register their reservation information. The contents of this change are as follows.
+
+![changed first draft](docs/WF-2nddraft.png)
+
+우리는 아이디어를 내면 그것에 대한 장단점과 구현 시 문제점들에 대해서 토론하였고, 초안 wireframe에 적용해 보고, 이 과정을 완성할 때까지 반복하였다.

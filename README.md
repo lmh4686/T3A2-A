@@ -264,7 +264,7 @@ Data is kept in DB so that uses can retrieve the data they want or update and de
 
 <br>
 
-`Wireframe` is simplified, low-fidelity representations of a user interface that are used to demonstrate the structure and layout of a website or application. A rough sketch of the designer's idea of the application is used to share his/her thoughts with the relevant stackholder and developers. We use the `agile methodology` to efficiently complete this wireframe, allowing for immediate reflection of user requirements changes and better ideas.
+`Wireframe` is simplified, low-fidelity representations of a user interface that are used to demonstrate the structure and layout of a website or application. A rough sketch of the designer's idea of the application is used to share his/her thoughts with the relevant stakeholder and developers. We use the `Agile methodology` to efficiently complete this wireframe, allowing for immediate reflection of user requirements changes and better ideas. When a new idea came up, we discussed the pros and cons of it and problems when implementing it, applied it to the draft wireframe, and repeated this process until it was completed. In order to explain the `Agile methodology` of consultation, modification, and reflection, the changed history part is described as follows.
 
 ### **The first draft**
 
@@ -286,4 +286,33 @@ An `Admin` item was added to navbar. The `booking list` on the reservation page 
 
 ![changed first draft](docs/WF-2nddraft.png)
 
-우리는 아이디어를 내면 그것에 대한 장단점과 구현 시 문제점들에 대해서 토론하였고, 초안 wireframe에 적용해 보고, 이 과정을 완성할 때까지 반복하였다.
+The yellow part is the newly added part, and the sky blue part is the changed part.
+
+Through the consultation process as above, the `Admin login` screen and the function of modifying and deleting reservations were added, and the screen was implemented so that admins could also modify and delete reservations.
+The final of its project design phase is as follows.
+
+![changed first draft](docs/WF-fin-dt-01.png)
+
+This is the screen when you first access this application.
+
+1. **Menu** <br>
+   User can go to a page where shows the menu served in the restaurant when click the button. <br>
+2. **Reservations** (http://localhost:3000/reservation/booking) <br>
+   User can go to the above URL where you can make a reservation.
+3. **AboutUs** (http://localhost:3000/aboutUs) <br>
+   A button to go to the page that shows restaurant's location and detail information. <br>
+4. **Admin** (http://localhost:3000/admin) <br>
+   A button that can be moved to a page where admin can log in <br>
+5. **Logo** (http://localhost:3000) <br>
+   A button to go to the home page <br>
+
+![changed first draft](docs/WF-fin-dt-02.png)
+
+It is a page where existing and new customers can make reservations
+
+1. **Customer search** <br>
+   When existing customers enter their mobile number, their information is displayed in number 2 area on the right, and they can enter the desired date and time for reservation. New customers can enter their reservation information.
+2. **Input area** <br>
+   Customer can enter the desired date, time, and number of guests for reservation. You can enter up to 6 people for the number of people.
+3. **Button** <br>
+   `Booking button` is user can make a reservation after entering the information. `Update button` is user can fix the reservation information. `Delete button` is user can cancel the reservation.

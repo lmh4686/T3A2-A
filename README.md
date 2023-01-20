@@ -1,10 +1,6 @@
 # Restaurant Web Application Project
 
-<<<<<<< HEAD
-## Project Introduction <요기 수정하고 있음!>
-=======
 ## Project Introduction
->>>>>>> 7029c20f440d718d7ce9639e3e9f625d9e802f9b
 
 ### Purpose
 

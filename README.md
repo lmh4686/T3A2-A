@@ -477,26 +477,45 @@ Testcases should be created to verify that each function of the application work
 
 Descript ReaMe file according to Rubric
 
-## Develop
+## Development
 
-### Coding
+### Source Coding
 
-Implement db and programs based on design. Conduct functional testing during development. Following up the assignment requirement when coding.
+Implement sources, RESTful API in each programs with ReactJs, Nodejs based on design. Conduct
+functional testing during development. Following up the assignment requirement when coding.
 
-![trello_develop](docs/trello_coding.png)
+- Implement appropriate functionalities as planned
+- Use Restful API to query the database
+- Catch errors and handle them for a good user experience
+- Return precise code and message for error
+- Implement functions to validate data
+- Make sure D.R.Y
+
+<img src="docs/Trello-develop-01.png" width="400" height="400" />
 
 ## Test
 
-### Testing
+Functional tests and unit tests are performed frequently during development according to the agile methodology, and when an error is found, the development and test stages are repeated until the development is completed by correcting the error part and performing the test. Perform the unit test according to the test case and verify that the function is accurately implemented. In addition, as the project has RESTful API we should test Interface test and Integration tests to verify frontend and backend interfaces.
 
-Functional tests and unit tests are performed frequently during development according to the agile methodology, and when an error is found, the development and test stages are repeated until the development is completed by correcting the error part and performing the test. Perform the unit test according to the test case and verify that the function is accurately implemented.
+![trello_test](docs/Trello-test-01.png)
 
-![trello_test](docs/trello_test.png)
+### User Test
+
+Ensure functionality is working properly as you planed
+‌
+
+### Interface Test
+
+Ensure RESTful API are working properly as you planed
+
+### Integration Test
 
 ## Deploy
 
 ### Deployment
 
-Ensure all requirements are carried out as planned.
+Once all development and testing have been completed, all source code will be deployed for users.
 
-![trello_deploy](docs/trello_deploy.png)
+<img src="docs/Trello-deploy-01.png" width="400" height="450" />
+
+During the course of the project we will monitor each other’s progress, ticking off features as we complete them, attaching the appropriate commits, and adjusting each team member’s workload where appropriate.

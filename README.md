@@ -1,6 +1,6 @@
-# Restaurant Web Application Project
+# Restaurant Reservation Application Project
 
-## Project Introduction <-----Yogida 11>
+## Project Introduction
 
 ### Purpose
 
@@ -291,7 +291,7 @@ The yellow part is the newly added part, and the sky blue part is the changed pa
 Through the consultation process as above, the `Admin login` screen and the function of modifying and deleting reservations were added, and the screen was implemented so that admins could also modify and delete reservations.
 The final of its project design phase is as follows.
 
-#### **Desktop Diagrams**
+### **Desktop Diagrams**
 
 ![changed first draft](docs/WF-fin-dt-01.png)
 
@@ -340,7 +340,7 @@ The admin can use this page to manage the bookings.
 5. **Logout Button** <br>
    For the safety reasons, this button is designed to log out if admin is away for a long time.
 
-#### **Tablet Diagrams**
+### **Tablet Diagrams**
 
 Contents shown in AAD for desktop should be displayed vertically on tablet(824X1194) so that they do not cross the window. The function description of each content is the same as that of the desktop.
 
@@ -348,10 +348,174 @@ Contents shown in AAD for desktop should be displayed vertically on tablet(824X1
 
 ![tablet 02](docs/WF-fin-tb-02.png) <br>
 
-#### **Mobile Diagrams**
+### **Mobile Diagrams**
 
 All content should be adjusted to fit the mobile size.
 
 ![tablet 02](docs/WF-fin-mb-01.png) <br>
 
 Our team completed our wireframes via `Facetime` and `chat`. When new features and restrictions came up, we tried to derive good results through an `iterative process of consultation, implementation, and testing`.
+
+## Project Management
+
+<br>
+
+Trello for Restaurant booking application: https://trello.com/b/yeE67wpk/t3a2-a
+
+![trello](docs/Trello-main.png)
+
+## PLAN
+
+It is the stage of establishing an overall schedule and plan for the project. For each step, decide on the due date and things to do, and plan to finish the project without any issues. The PLAN consists of `Creating Project Plan` and `Setting deliverables`.
+
+![trello_plan](docs/Trello-plan.png)
+
+### Creating Project Plan
+
+Create the project plan and schedule in Trello according to Agile methodology.
+
+- Create the due data and check list of each step in the project.
+- Plan and schedule and prioritize.
+
+### Setting deliverables
+
+- Deliverables comes out in each step of project are very important. This project has lots of deliverables so we have to concern ourselves not to miss any deliverables. Thus, we put this step in Plan.
+  <br>
+
+## Design
+
+Program, interface, and database should be designed for implementing applications based on User story. All of these are top priority tasks during the project.
+
+![trello_design](docs/Trello-design-01.png)
+
+### Design MongoDb
+
+To implement the database, define collections and schemas. We have 3 collections to cover the transactions.
+
+#### **Admin**
+
+Represents admin user’s ID and Password.
+No CRUD
+Pre seed a single doc into the DB
+
+#### **Reservation**
+
+Represents all reservations.
+Read, Update, Delete by only Admin.
+Create by Anyone.
+SubDoc: Guest
+
+#### **Table**
+
+Represents all table a restaurant have.
+No CRUD
+Pre seed 6 of 2 seaters, 8 of 4 seaters, 4 of 6 Seaters into the DB
+
+### Dataflow Diagram
+
+DFD is implemented to understand the flow of data for the entire application.
+
+DFD URL:
+https://lucid.app/lucidchart/8eaa9e24-8138-4385-9a71-400adc39f12d/edit?viewport_loc=-1599%2C-14924%2C2047%2C1129%2C0_0&invitationId=inv_6d4f3244-6c95-473e-8022-36e45e2ffadd
+
+### Application Architecture Diagram
+
+Create an AAD to understand the overall structure of the application.
+
+![trello_design](docs/Trello-design-02.jpeg)
+
+### Creating UserStory
+
+Provides multiple user stories that use ‘persona, what and why’ that outline meaningful features of project.
+
+### Creating Wireframes
+
+The application is implemented to correspond to all screen sizes for the application to be implemented.
+
+### Design API
+
+Create API to communicate between the frontend and the backend.
+
+#### **/reservation**
+
+POST
+For customers' booking request.
+
+GET
+To get a list of all reservations.
+
+‌#### **/reservation/:mobileNumber**
+
+GET
+To get a list of reservations that match with the provided mobile number.
+
+#### **/reservation/:id**
+
+DELETE
+To delete one reservation
+
+PUT
+To update one reservation
+
+#### **/admin**
+
+POST
+To log in as admin
+
+![trello_design](docs/Trello-design-03.jpeg)
+
+### Design Workflow
+
+Design workflow for source code to understand the application structure easily and create the program list.
+Setting person in charge of each program based on the program list.
+
+### Design Testcase for user Test
+
+Testcases should be created to verify that each function of the application works normally.
+
+### ReadMe document
+
+Descript ReaMe file according to Rubric
+
+## Development
+
+### Source Coding
+
+Implement sources, RESTful API in each programs with ReactJs, Nodejs based on design. Conduct
+functional testing during development. Following up the assignment requirement when coding.
+
+- Implement appropriate functionalities as planned
+- Use Restful API to query the database
+- Catch errors and handle them for a good user experience
+- Return precise code and message for error
+- Implement functions to validate data
+- Make sure D.R.Y
+
+<img src="docs/Trello-develop-01.png" width="400" height="400" />
+
+## Test
+
+Functional tests and unit tests are performed frequently during development according to the agile methodology, and when an error is found, the development and test stages are repeated until the development is completed by correcting the error part and performing the test. Perform the unit test according to the test case and verify that the function is accurately implemented. In addition, as the project has RESTful API we should test Interface test and Integration tests to verify frontend and backend interfaces.
+
+![trello_test](docs/Trello-test-01.png)
+
+### User Test
+
+Ensure functionality is working properly as you planed
+‌
+
+### Interface Test
+
+Ensure RESTful API are working properly as you planed
+
+### Integration Test
+
+## Deploy
+
+### Deployment
+
+Once all development and testing have been completed, all source code will be deployed for users.
+
+<img src="docs/Trello-deploy-01.png" width="400" height="450" />
+
+During the course of the project we will monitor each other’s progress, ticking off features as we complete them, attaching the appropriate commits, and adjusting each team member’s workload where appropriate.
